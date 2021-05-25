@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Quiz</title>
+  </head>
+  <body>
+    <div id="loading" class="loading">
+      <h1></h1>
+    </div>
+
+    <div
+      id="welcomeQuote"
+      class="
+        welcomeQuote
+        d-flex
+        align-items-center
+        flex-column
+        animate__animated animate__bounce animate__slow
+      "
+    >
+      <h1>Welcome to Quizify!</h1>
+      <p>Click on the start button to begin.</p>
+      <div class="border"></div>
+      <button id="startQuiz" class="btn btn-success">Start</button>
+    </div>
+    <div
+      id="goodLuckSection"
+      class="
+        goodLuckSection
+        d-none
+        justify-content-center
+        align-items-center
+        flex-column
+        bg-light
+        animate__animated animate__backInLeft
+      "
+    >
+      <div
+        id="goodLuckQuote"
+        class="goodLuckQuote d-flex align-items-center flex-column container"
+      >
+        <h1>Good Luck!</h1>
+        <p>Click on the button to start over</p>
+        <div class="border"></div>
+        <button id="startOver" class="btn btn-warning">Start Over</button>
+      </div>
+
+      <div
+        id="questionContainer"
+        class="questions container-fluid mt-5 mb-5"
+      ></div>
+
+      <div
+        id="completedQuestions"
+        class="d-flex align-items-center flex-column container bg-light"
+      >
+        Completed <span id="questionNumber"></span> /20
+      </div>
+    </div>
+    <div
+      id="resultSection"
+      class="
+        d-none
+        align-items-center
+        flex-column
+        bg-light
+        animate__animated animate__backInLeft
+      "
+    >
+      <div
+        id="correctAnswer"
+        class="
+          correctAnswer
+          d-flex
+          container
+          bg-light
+          align-items-center
+          flex-column
+        "
+      >
+        <h1>Let's see your score</h1>
+        <p>Click on the button to start over</p>
+        <div class="border"></div>
+        <button id="tryAgain" class="btn btn-danger">Try Again</button>
+        <div
+          id="totalCorrectAnswers"
+          class="d-flex align-items-center flex-column container bg-light"
+        >
+          Completed <span id="counterCorrect"></span> /20
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
